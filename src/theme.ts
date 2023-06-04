@@ -1,0 +1,41 @@
+const colors = {
+	brightBlue: 'hsl(220, 98%, 61%)',
+	checkBackground: {
+		direction: 'to right',
+		colors: ['hsl(192, 100%, 67%)', 'hsl(280, 87%, 65%)'] as const,
+	},
+	light: {
+		textColor: 'hsl(235, 19%, 35%)',
+		backgroundColor: 'hsl(0, 0%, 98%)',
+		mainColor: 'hsl(0, 0%, 98%)',
+		borderColor: '#dcd6d6',
+		secondaryColor: '#fff',
+		darkGrayishBlue: 'hsl(236, 9%, 61%)',
+		veryDarkGrayishBlue: 'hsl(235, 19%, 35%)',
+	},
+	dark: {
+		textColor: 'hsl(234, 39%, 85%)',
+		backgroundColor: 'hsl(235, 21%, 11%)',
+		mainColor: 'hsl(235, 21%, 11%)',
+		borderColor: 'hsl(235, 19%, 35%)',
+		secondaryColor: 'hsl(235, 24%, 19%)',
+		darkGrayishBlue: 'hsl(234, 11%, 52%)',
+		lightGrayishBlueHover: 'hsl(236, 33%, 92%)',
+		veryDarkGrayishBlue: 'hsl(233, 14%, 35%)',
+		veryDarkGrayishBlue2: 'hsl(237, 14%, 26%)',
+	},
+}
+
+export const theme = {
+	breakpoints: {
+		mobile: 768,
+	},
+	font: {
+		size: 18,
+		family: 'Josefin Sans',
+	},
+	colors,
+}
+
+export type Theme = typeof theme
+export type ThemeProps = { $theme: 'light' | 'dark' }
