@@ -71,7 +71,7 @@ Error generating stack: `+i.message+`
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 	}
-`,Jf=N.createContext(void 0),ev=({children:e})=>{const[t,n]=N.useState(()=>{const o=window.localStorage.getItem("theme");return!o||!["light","dark"].includes(o)?"light":o}),r=()=>{n(o=>{const i=o==="light"?"dark":"light";return window.localStorage.setItem("theme",i),i})};return I.jsxs(Jf.Provider,{value:{theme:t,toggleTheme:r},children:[I.jsx(qm,{$theme:t}),e]})},gt=()=>{const e=N.useContext(Jf);if(e===void 0)throw new Error("useTheme must be used within a ThemeProvider");return e},tv="/frontend-mentor-todo-appo/assets/icon-moon-dadf6d0a.svg",nv="/frontend-mentor-todo-appo/assets/icon-sun-fc80f87a.svg",rv=ae.div`
+`,Jf=N.createContext(void 0),ev=({children:e})=>{const[t,n]=N.useState(()=>{const o=window.localStorage.getItem("theme");return!o||!["light","dark"].includes(o)?"light":o}),r=()=>{n(o=>{const i=o==="light"?"dark":"light";return window.localStorage.setItem("theme",i),i})};return I.jsxs(Jf.Provider,{value:{theme:t,toggleTheme:r},children:[I.jsx(qm,{$theme:t}),e]})},gt=()=>{const e=N.useContext(Jf);if(e===void 0)throw new Error("useTheme must be used within a ThemeProvider");return e},tv="/frontend-mentor-todo-app/assets/icon-moon-dadf6d0a.svg",nv="/frontend-mentor-todo-app/assets/icon-sun-fc80f87a.svg",rv=ae.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -103,7 +103,7 @@ Error generating stack: `+i.message+`
 	align-items: center;
 	justify-content: center;
 	padding: 0;
-`,sv=()=>{const{theme:e,toggleTheme:t}=gt();return I.jsxs(rv,{children:[I.jsx(ov,{children:"TODO"}),I.jsx(iv,{$theme:e,onClick:()=>t()})]})},lv="/frontend-mentor-todo-appo/assets/bg-desktop-light-c99caf89.jpg",uv="/frontend-mentor-todo-appo/assets/bg-desktop-dark-cf72eaad.jpg",av="/frontend-mentor-todo-appo/assets/bg-mobile-light-df636158.jpg",cv="/frontend-mentor-todo-appo/assets/bg-mobile-dark-0b3e4071.jpg",Ja={light:{desktop:lv,mobile:av},dark:{desktop:uv,mobile:cv}},dv=ae.main`
+`,sv=()=>{const{theme:e,toggleTheme:t}=gt();return I.jsxs(rv,{children:[I.jsx(ov,{children:"TODO"}),I.jsx(iv,{$theme:e,onClick:()=>t()})]})},lv="/frontend-mentor-todo-app/assets/bg-desktop-light-c99caf89.jpg",uv="/frontend-mentor-todo-app/assets/bg-desktop-dark-cf72eaad.jpg",av="/frontend-mentor-todo-app/assets/bg-mobile-light-df636158.jpg",cv="/frontend-mentor-todo-app/assets/bg-mobile-dark-0b3e4071.jpg",Ja={light:{desktop:lv,mobile:av},dark:{desktop:uv,mobile:cv}},dv=ae.main`
 	background-color: ${({$theme:e})=>z.colors[e].backgroundColor};
 	display: flex;
 	flex-direction: column;
@@ -173,7 +173,7 @@ Error generating stack: `+i.message+`
 			border-color: ${z.colors.checkBackground.colors[1]};
 		}
 	}
-`,yv="/frontend-mentor-todo-appo/assets/icon-check-bcf055e6.svg",Sv=({checked:e,onClick:t})=>{const{theme:n}=gt();return I.jsx(vv,{$checked:e,$theme:n,children:I.jsx("span",{onClick:t,children:e&&I.jsx("img",{src:yv})})})},El=ae.div`
+`,yv="/frontend-mentor-todo-app/assets/icon-check-bcf055e6.svg",Sv=({checked:e,onClick:t})=>{const{theme:n}=gt();return I.jsx(vv,{$checked:e,$theme:n,children:I.jsx("span",{onClick:t,children:e&&I.jsx("img",{src:yv})})})},El=ae.div`
 	background-color: ${({$theme:e})=>z.colors[e].secondaryColor};
 	display: flex;
 	flex-direction: row;
@@ -228,7 +228,7 @@ Error generating stack: `+i.message+`
 	${({$show:e})=>e&&Vn`
 			opacity: 1;
 		`}
-`,Ev="/frontend-mentor-todo-appo/assets/icon-cross-37f00ffb.svg",ep=({onSubmit:e,onChange:t,onRemove:n,todo:r,isOver:o,isDragging:i,containerRef:s})=>{const{theme:l}=gt(),[u,a]=N.useState(!1),f=()=>{t({...r,completed:!r.completed})},g=v=>{t({...r,description:v})},h=v=>{v.key==="Enter"&&r.description!==""&&(e==null||e(r))},m=()=>{r.id<=0||a(!0)},y=()=>{a(!1)};return I.jsxs(El,{ref:s,$isDraggingOver:o,$isDragging:i,$theme:l,$checked:r.completed,onMouseEnter:m,onMouseLeave:y,children:[I.jsx(Sv,{checked:r.completed,onClick:()=>f()}),I.jsx("input",{type:"text",placeholder:"Create a new todo...",value:r.description,onChange:v=>g(v.target.value),onKeyPress:v=>h(v)}),!!n&&I.jsx(wv,{$show:u,onClick:()=>n(),title:"Remove todo",children:I.jsx("img",{src:Ev,alt:"remove todo"})})]})},Kr=()=>{const e=N.useContext(qf);if(!e)throw new Error("useTodos must be used within a TodosProvider");return e},Cv=()=>{const[,e]=Kr(),[t,n]=N.useState({completed:!1,description:"",id:0}),r=o=>{e({type:"add-todo",payload:o}),n({completed:!1,description:"",id:0})};return I.jsx(ep,{todo:t,onSubmit:r,onChange:n})},tp=N.createContext(void 0),xv=(e,t)=>t,kv=({children:e})=>{const[t,n]=N.useReducer(xv,"all");return I.jsx(tp.Provider,{value:[t,n],children:e})},np=()=>{const e=N.useContext(tp);if(e===void 0)throw new Error("useFilterTodos must be used within a FilterTodosProvider");return e},Tv=ae.div`
+`,Ev="/frontend-mentor-todo-app/assets/icon-cross-37f00ffb.svg",ep=({onSubmit:e,onChange:t,onRemove:n,todo:r,isOver:o,isDragging:i,containerRef:s})=>{const{theme:l}=gt(),[u,a]=N.useState(!1),f=()=>{t({...r,completed:!r.completed})},g=v=>{t({...r,description:v})},h=v=>{v.key==="Enter"&&r.description!==""&&(e==null||e(r))},m=()=>{r.id<=0||a(!0)},y=()=>{a(!1)};return I.jsxs(El,{ref:s,$isDraggingOver:o,$isDragging:i,$theme:l,$checked:r.completed,onMouseEnter:m,onMouseLeave:y,children:[I.jsx(Sv,{checked:r.completed,onClick:()=>f()}),I.jsx("input",{type:"text",placeholder:"Create a new todo...",value:r.description,onChange:v=>g(v.target.value),onKeyPress:v=>h(v)}),!!n&&I.jsx(wv,{$show:u,onClick:()=>n(),title:"Remove todo",children:I.jsx("img",{src:Ev,alt:"remove todo"})})]})},Kr=()=>{const e=N.useContext(qf);if(!e)throw new Error("useTodos must be used within a TodosProvider");return e},Cv=()=>{const[,e]=Kr(),[t,n]=N.useState({completed:!1,description:"",id:0}),r=o=>{e({type:"add-todo",payload:o}),n({completed:!1,description:"",id:0})};return I.jsx(ep,{todo:t,onSubmit:r,onChange:n})},tp=N.createContext(void 0),xv=(e,t)=>t,kv=({children:e})=>{const[t,n]=N.useReducer(xv,"all");return I.jsx(tp.Provider,{value:[t,n],children:e})},np=()=>{const e=N.useContext(tp);if(e===void 0)throw new Error("useFilterTodos must be used within a FilterTodosProvider");return e},Tv=ae.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
