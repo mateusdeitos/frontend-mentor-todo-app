@@ -60,8 +60,8 @@ export const RemoveTodoButton = styled.button<{ $show: boolean }>`
 	transition: opacity 0.2s ease-in-out;
 
 	& > img {
-		width: 24px;
-		height: 24px;
+		width: 18px;
+		height: 18px;
 	}
 
 	${({ $show }: { $show: boolean }) =>
