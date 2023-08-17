@@ -10,14 +10,14 @@ export const TodoInputContainer = styled.div<Props>`
 	flex-direction: row;
 	align-items: center;
 	width: 100%;
-	padding-top: 24px;
-	padding-bottom: 24px;
+	padding-top: 23px;
+	padding-bottom: 23px;
 	border: 1px solid ${({ $theme }: Props) => theme.colors[$theme].borderColor};
 	border-radius: 8px;
 
 	& > input[type='text'] {
 		border: none;
-		font-size: ${theme.font.size * 1.5}px;
+		font-size: ${theme.font.size * 1}px;
 		background-color: ${({ $theme }: Props) => theme.colors[$theme].secondaryColor};
 		outline: none;
 		width: 100%;

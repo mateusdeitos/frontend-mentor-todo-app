@@ -8,15 +8,15 @@ type ContainerProps = ThemeProps & {
 export const CheckboxContainer = styled.div<ContainerProps>`
 	display: inline-block;
 	vertical-align: middle;
-	padding-left: 32px;
-	padding-right: 32px;
+	padding-left: 24px;
+	padding-right: 24px;
 
 	& > span {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 40px;
-		height: 40px;
+		width: 24px;
+		height: 24px;
 
 		cursor: pointer;
 
@@ -31,8 +31,8 @@ export const CheckboxContainer = styled.div<ContainerProps>`
 			`}
 
 		& > img {
-			width: 16px;
-			height: 12px;
+			width: 8px;
+			height: 6px;
 		}
 
 		border-radius: 50%;
