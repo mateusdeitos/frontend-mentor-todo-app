@@ -5,7 +5,7 @@ import { TodosProvider } from './components/TodosProvider'
 import { NewTodoInput } from './components/NewTodoInput'
 import { useTodos } from './hooks/useTodos'
 import styled from 'styled-components'
-import { theme, ThemeProps } from './theme'
+import { ThemeProps } from './theme'
 import { TodoInput } from './components/TodoInput'
 import { TodoInputContainer } from './components/TodoInput/styles'
 
@@ -29,7 +29,11 @@ const Todos = () => {
 	return (
 		<TodosContainer>
 			{todos.map(todo => (
-				<TodoInput todo={todo} onChange={payload => dispatch({ type: 'edit-todo', payload })} />
+				<TodoInput
+					todo={todo}
+					onChange={payload => dispatch({ type: 'edit-todo', payload })}
+					onRemove={() => dispatch({ type: 'delete-todo', payload: todo.id })}
+				/>
 			))}
 		</TodosContainer>
 	)
