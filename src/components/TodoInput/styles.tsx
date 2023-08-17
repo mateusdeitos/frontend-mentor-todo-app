@@ -20,7 +20,10 @@ export const TodoInputContainer = styled.div<Props>`
 		font-size: ${theme.font.size * 1.5}px;
 		background-color: ${({ $theme }: Props) => theme.colors[$theme].secondaryColor};
 		outline: none;
+		width: 100%;
 		color: ${({ $theme }: Props) => theme.colors[$theme].textColor};
+
+		caret: block 1px solid ${theme.colors.brightBlue};
 
 		${({ $theme, $checked }: Props) =>
 			$checked &&
@@ -34,4 +37,27 @@ export const TodoInputContainer = styled.div<Props>`
 			color: ${({ $theme }: Props) => theme.colors[$theme].borderColor};
 		}
 	}
+`
+
+export const RemoveTodoButton = styled.button<{ $show: boolean }>`
+	opacity: 0;
+	margin-left: auto;
+	padding-right: 24px;
+	padding-left: 24px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	transition: opacity 0.2s ease-in-out;
+
+	& > img {
+		width: 24px;
+		height: 24px;
+	}
+
+	${({ $show }: { $show: boolean }) =>
+		$show &&
+		css`
+			opacity: 1;
+		`}
 `
