@@ -318,6 +318,6 @@ Error generating stack: `+i.message+`
 	div {
 		padding: 4px;
 		border-radius: 5px;
-		background-color: ${({$theme:e})=>z.colors[e].secondaryColor};
+		background-color: ${({$theme:e})=>z.colors[e].backgroundColor};
 	}
 `;globalThis&&globalThis.__awaiter;globalThis&&globalThis.__awaiter;function q0(e){const t=i=>typeof window<"u"?window.matchMedia(i).matches:!1,[n,r]=N.useState(t(e));function o(){r(t(e))}return N.useEffect(()=>{const i=window.matchMedia(e);return o(),i.addListener?i.addListener(o):i.addEventListener("change",o),()=>{i.removeListener?i.removeListener(o):i.removeEventListener("change",o)}},[e]),n}function e1(){const e=q0(`max-width: ${z.breakpoints.mobile}px`);return I.jsx(By,{backend:e?b0:U0,children:I.jsx(mv,{children:I.jsx(kv,{children:I.jsx(ev,{children:I.jsxs(hv,{children:[I.jsx(sv,{}),I.jsx(Cv,{}),I.jsx(C0,{}),I.jsx(D0,{}),I.jsx(Z0,{})]})})})})})}If(document.getElementById("root")).render(I.jsx(e1,{}));
