@@ -4,17 +4,22 @@ import { ThemeProvider } from './components/ThemeProvider'
 import { TodosProvider } from './components/TodosProvider'
 import { NewTodoInput } from './components/NewTodoInput'
 import { TodoList } from './TodoList'
+import { FilterTodosProvider } from './components/FilterTodosProvider'
+import { TodoFilters } from './TodoFilters'
 
 export function App() {
 	return (
 		<TodosProvider>
-			<ThemeProvider>
-				<Main>
-					<Header />
-					<NewTodoInput />
-					<TodoList />
-				</Main>
-			</ThemeProvider>
+			<FilterTodosProvider>
+				<ThemeProvider>
+					<Main>
+						<Header />
+						<NewTodoInput />
+						<TodoList />
+						<TodoFilters />
+					</Main>
+				</ThemeProvider>
+			</FilterTodosProvider>
 		</TodosProvider>
 	)
 }

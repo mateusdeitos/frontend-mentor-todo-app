@@ -30,6 +30,9 @@ type Action =
 			type: 'edit-todo'
 			payload: ToDo
 	  }
+	| {
+			type: 'clear-completed'
+	  }
 
 type Value = [State, Dispatch<Action>]
 
@@ -79,6 +82,12 @@ const reducer = (state: State, action: Action): State => {
 			return {
 				...state,
 				todos: state.todos.filter(todo => todo.id !== action.payload),
+			}
+
+		case 'clear-completed':
+			return {
+				...state,
+				todos: state.todos.filter(todo => !todo.completed),
 			}
 
 		default:

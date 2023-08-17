@@ -1,19 +1,28 @@
 import { useTodos } from '../hooks/useTodos'
 import { TodoInput } from '../components/TodoInput'
 import { TodosContainer } from './styles'
+import { useFilterTodos } from '../hooks/useFilterTodos'
 
 export const TodoList = () => {
 	const [{ todos }, dispatch] = useTodos()
+	const [filter] = useFilterTodos()
 
 	return (
 		<TodosContainer>
-			{todos.map(todo => (
-				<TodoInput
-					todo={todo}
-					onChange={payload => dispatch({ type: 'edit-todo', payload })}
-					onRemove={() => dispatch({ type: 'delete-todo', payload: todo.id })}
-				/>
-			))}
+			{todos
+				.filter(todo => {
+					if (filter === 'all') return true
+					if (filter === 'active') return !todo.completed
+					if (filter === 'completed') return todo.completed
+					return true
+				})
+				.map(todo => (
+					<TodoInput
+						todo={todo}
+						onChange={payload => dispatch({ type: 'edit-todo', payload })}
+						onRemove={() => dispatch({ type: 'delete-todo', payload: todo.id })}
+					/>
+				))}
 		</TodosContainer>
 	)
 }
