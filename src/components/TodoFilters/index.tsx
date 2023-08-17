@@ -1,5 +1,5 @@
-import { useTheme } from '../hooks/useTheme'
-import { useTodos } from '../hooks/useTodos'
+import { useTheme } from '../../hooks/useTheme'
+import { useTodos } from '../../hooks/useTodos'
 import { ActionLink } from './ActionLink'
 import { Filters } from './Filters'
 import { UncompleteTodosCounter } from './UncompleteTodosCounter'

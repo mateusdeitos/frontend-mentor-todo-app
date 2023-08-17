@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { ThemeProps, theme } from '../theme'
+import { ThemeProps, theme } from '../../theme'
 
 export type LinkStyleProps = ThemeProps & {
 	$isActive: boolean

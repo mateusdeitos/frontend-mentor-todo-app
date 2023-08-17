@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
-import { useTodos } from '../hooks/useTodos'
-import { ThemeProps, theme } from '../theme'
-import { useTheme } from '../hooks/useTheme'
+import { useTodos } from '../../hooks/useTodos'
+import { ThemeProps, theme } from '../../theme'
+import { useTheme } from '../../hooks/useTheme'
 
 export const UncompleteTodosCounter = () => {
 	const [{ todos }] = useTodos()

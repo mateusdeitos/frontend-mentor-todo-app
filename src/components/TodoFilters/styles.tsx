@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ThemeProps, theme } from '../theme'
+import { ThemeProps, theme } from '../../theme'
 import { LinksContainer } from './Filters'
 
 export const FilterContainer = styled.div<ThemeProps>`

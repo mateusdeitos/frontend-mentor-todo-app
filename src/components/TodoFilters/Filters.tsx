@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
-import { ThemeProps } from '../theme'
-import { useTheme } from '../hooks/useTheme'
-import { useFilterTodos } from '../hooks/useFilterTodos'
+import { ThemeProps } from '../../theme'
+import { useTheme } from '../../hooks/useTheme'
+import { useFilterTodos } from '../../hooks/useFilterTodos'
 import { ActionLink } from './ActionLink'
 
 export const Filters = () => {
