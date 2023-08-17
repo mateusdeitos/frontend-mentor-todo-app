@@ -3,15 +3,19 @@ import { ToDo } from '../TodosProvider'
 import { CheckBox } from '../CheckBox'
 import { RemoveTodoButton, TodoInputContainer } from './styles'
 import { useState } from 'react'
+import * as React from 'react'
 
 type InputProps = {
+	containerRef?: React.RefObject<HTMLDivElement> | React.RefCallback<HTMLDivElement>
 	todo: ToDo
 	onSubmit?: (todo: ToDo) => void
 	onChange: (todo: ToDo) => void
 	onRemove?: () => void
+	isOver?: boolean
+	isDragging?: boolean
 }
 
-export const TodoInput = ({ onSubmit, onChange, onRemove, todo }: InputProps) => {
+export const TodoInput = ({ onSubmit, onChange, onRemove, todo, isOver, isDragging, containerRef }: InputProps) => {
 	const { theme } = useTheme()
 	const [shouldShowRemoveButton, setShouldShowRemoveButton] = useState(false)
 
@@ -46,6 +50,9 @@ export const TodoInput = ({ onSubmit, onChange, onRemove, todo }: InputProps) =>
 
 	return (
 		<TodoInputContainer
+			ref={containerRef}
+			$isDraggingOver={isOver}
+			$isDragging={isDragging}
 			$theme={theme}
 			$checked={todo.completed}
 			onMouseEnter={showRemoveButton}

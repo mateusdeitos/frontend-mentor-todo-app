@@ -33,6 +33,13 @@ type Action =
 	| {
 			type: 'clear-completed'
 	  }
+	| {
+			type: 'move-todo'
+			payload: {
+				from: number
+				to: number
+			}
+	  }
 
 type Value = [State, Dispatch<Action>]
 
@@ -89,6 +96,18 @@ const reducer = (state: State, action: Action): State => {
 				...state,
 				todos: state.todos.filter(todo => !todo.completed),
 			}
+
+		case 'move-todo': {
+			const { from, to } = action.payload
+			const todos = [...state.todos]
+			const [removed] = todos.splice(from, 1)
+			todos.splice(to, 0, removed)
+
+			return {
+				...state,
+				todos,
+			}
+		}
 
 		default:
 			return state

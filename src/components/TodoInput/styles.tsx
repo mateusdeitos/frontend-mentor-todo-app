@@ -3,6 +3,8 @@ import { theme, ThemeProps } from '../../theme'
 
 type Props = ThemeProps & {
 	$checked: boolean
+	$isDragging: boolean
+	$isDraggingOver: boolean
 }
 export const TodoInputContainer = styled.div<Props>`
 	background-color: ${({ $theme }: Props) => theme.colors[$theme].secondaryColor};
@@ -13,6 +15,14 @@ export const TodoInputContainer = styled.div<Props>`
 	padding-top: 23px;
 	padding-bottom: 23px;
 	border-radius: 5px;
+	transition: filter 0.2s ease-in-out;
+
+	${({ $isDragging, $isDraggingOver }: Props) =>
+		($isDragging || $isDraggingOver) &&
+		css`
+			filter: brightness(0.7);
+			cursor: grabbing;
+		`}
 
 	& > input[type='text'] {
 		border: none;
