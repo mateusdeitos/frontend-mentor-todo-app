@@ -2,13 +2,15 @@ import { useTodos } from '../hooks/useTodos'
 import { TodoInput } from '../components/TodoInput'
 import { TodosContainer } from './styles'
 import { useFilterTodos } from '../hooks/useFilterTodos'
+import { useTheme } from '../hooks/useTheme'
 
 export const TodoList = () => {
 	const [{ todos }, dispatch] = useTodos()
 	const [filter] = useFilterTodos()
+	const { theme } = useTheme()
 
 	return (
-		<TodosContainer>
+		<TodosContainer $theme={theme}>
 			{todos
 				.filter(todo => {
 					if (filter === 'all') return true

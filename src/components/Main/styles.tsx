@@ -26,7 +26,12 @@ export const Content = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	width: 540px;
+	min-width: 540px;
+	padding: 0 24px;
 
 	margin: -400px auto 0 auto;
+
+	@media (max-width: 540px) {
+		min-width: 100%;
+	}
 `

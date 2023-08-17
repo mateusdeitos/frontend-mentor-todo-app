@@ -8,7 +8,7 @@ export const Filters = () => {
 	const { theme } = useTheme()
 	const [filter, setFilter] = useFilterTodos()
 	return (
-		<Container $theme={theme}>
+		<LinksContainer $theme={theme}>
 			<ActionLink $isActive={filter === 'all'} $theme={theme} onClick={() => setFilter('all')}>
 				All
 			</ActionLink>
@@ -18,11 +18,11 @@ export const Filters = () => {
 			<ActionLink $isActive={filter === 'completed'} $theme={theme} onClick={() => setFilter('completed')}>
 				Completed
 			</ActionLink>
-		</Container>
+		</LinksContainer>
 	)
 }
 
-const Container = styled.div<ThemeProps>`
+export const LinksContainer = styled.div<ThemeProps>`
 	display: flex;
 	flex-direction: row;
 	align-items: center;

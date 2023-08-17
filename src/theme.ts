@@ -13,6 +13,7 @@ const colors = {
 		hoverColor: 'hsl(236, 33%, 92%)',
 		darkGrayishBlue: 'hsl(236, 9%, 61%)',
 		veryDarkGrayishBlue: 'hsl(235, 19%, 35%)',
+		boxShadow: '#c2c3d67f',
 	},
 	dark: {
 		textColor: 'hsl(234, 39%, 85%)',
@@ -23,13 +24,14 @@ const colors = {
 		hoverColor: 'hsl(236, 33%, 92%)',
 		darkGrayishBlue: 'hsl(234, 11%, 52%)',
 		veryDarkGrayishBlue: 'hsl(233, 14%, 35%)',
+		boxShadow: '#0000007f',
 		veryDarkGrayishBlue2: 'hsl(237, 14%, 26%)',
 	},
 }
 
 export const theme = {
 	breakpoints: {
-		mobile: 768,
+		mobile: 540,
 	},
 	font: {
 		size: 18,

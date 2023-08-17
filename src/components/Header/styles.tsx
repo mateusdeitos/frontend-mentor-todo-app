@@ -11,9 +11,17 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-	font-size: ${theme.font.size * 3.5}px;
+	font-size: 40px;
 	color: #fff;
-	letter-spacing: 32px;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 15px;
+
+	@media (max-width: ${theme.breakpoints.mobile}px) {
+		font-size: 27px;
+	}
 `
 
 export const IconButton = styled.button<ThemeProps>`

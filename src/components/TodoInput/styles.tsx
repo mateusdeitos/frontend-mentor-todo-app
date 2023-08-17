@@ -12,8 +12,7 @@ export const TodoInputContainer = styled.div<Props>`
 	width: 100%;
 	padding-top: 23px;
 	padding-bottom: 23px;
-	border: 1px solid ${({ $theme }: Props) => theme.colors[$theme].borderColor};
-	border-radius: 8px;
+	border-radius: 5px;
 
 	& > input[type='text'] {
 		border: none;
