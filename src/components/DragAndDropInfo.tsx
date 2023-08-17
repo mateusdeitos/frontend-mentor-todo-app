@@ -24,6 +24,6 @@ const DragAndDropInfoContainer = styled.div`
 	div {
 		padding: 4px;
 		border-radius: 5px;
-		background-color: ${({ $theme }: ThemeProps) => theme.colors[$theme].secondaryColor};
+		background-color: ${({ $theme }: ThemeProps) => theme.colors[$theme].backgroundColor};
 	}
 `
