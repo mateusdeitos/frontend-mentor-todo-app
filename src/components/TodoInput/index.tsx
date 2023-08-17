@@ -4,6 +4,7 @@ import { CheckBox } from '../CheckBox'
 import { RemoveTodoButton, TodoInputContainer } from './styles'
 import { useState } from 'react'
 import * as React from 'react'
+import iconCross from '../../../assets/icon-cross.svg'
 
 type InputProps = {
 	containerRef?: React.RefObject<HTMLDivElement> | React.RefCallback<HTMLDivElement>
@@ -69,7 +70,7 @@ export const TodoInput = ({ onSubmit, onChange, onRemove, todo, isOver, isDraggi
 
 			{!!onRemove && (
 				<RemoveTodoButton $show={shouldShowRemoveButton} onClick={() => onRemove()} title="Remove todo">
-					<img src="/assets/icon-cross.svg" alt="remove todo" />
+					<img src={iconCross} alt="remove todo" />
 				</RemoveTodoButton>
 			)}
 		</TodoInputContainer>

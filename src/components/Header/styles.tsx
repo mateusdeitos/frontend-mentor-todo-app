@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { theme, ThemeProps } from '../../theme'
+import iconMoon from '../../../assets/icon-moon.svg'
+import iconSun from '../../../assets/icon-sun.svg'
 
 export const Container = styled.div`
 	display: flex;
@@ -28,7 +30,7 @@ export const IconButton = styled.button<ThemeProps>`
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	background-image: url(${props => (props.$theme === 'light' ? '/assets/icon-moon.svg' : '/assets/icon-sun.svg')});
+	background-image: url(${props => (props.$theme === 'light' ? iconMoon : iconSun)});
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 40px;
