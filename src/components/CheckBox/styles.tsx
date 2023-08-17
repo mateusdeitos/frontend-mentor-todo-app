@@ -18,6 +18,8 @@ export const CheckboxContainer = styled.div<ContainerProps>`
 		width: 40px;
 		height: 40px;
 
+		cursor: pointer;
+
 		${({ $checked }: ContainerProps) =>
 			$checked &&
 			css`
@@ -35,5 +37,11 @@ export const CheckboxContainer = styled.div<ContainerProps>`
 
 		border-radius: 50%;
 		border: 1px solid ${({ $theme }: ContainerProps) => theme.colors[$theme].borderColor};
+
+		transition: border-color 0.2s ease-in-out;
+
+		&:hover {
+			border-color: ${theme.colors.checkBackground.colors[1]};
+		}
 	}
 `
