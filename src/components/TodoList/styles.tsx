@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { ThemeProps, theme } from '../theme'
-import { TodoInputContainer } from '../components/TodoInput/styles'
+import { TodoInputContainer } from '../TodoInput/styles'
+import { ThemeProps, theme } from '../../theme'
 
 export const TodosContainer = styled.div<ThemeProps>`
 	display: flex;

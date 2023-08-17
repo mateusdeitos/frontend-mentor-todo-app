@@ -1,8 +1,8 @@
-import { useTodos } from '../hooks/useTodos'
-import { TodoInput } from '../components/TodoInput'
+import { useFilterTodos } from '../../hooks/useFilterTodos'
+import { useTheme } from '../../hooks/useTheme'
+import { TodoInput } from '../TodoInput'
+import { useTodos } from '../../hooks/useTodos'
 import { TodosContainer } from './styles'
-import { useFilterTodos } from '../hooks/useFilterTodos'
-import { useTheme } from '../hooks/useTheme'
 
 export const TodoList = () => {
 	const [{ todos }, dispatch] = useTodos()

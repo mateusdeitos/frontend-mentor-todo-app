@@ -3,9 +3,9 @@ import { Main } from './components/Main/index'
 import { ThemeProvider } from './components/ThemeProvider'
 import { TodosProvider } from './components/TodosProvider'
 import { NewTodoInput } from './components/NewTodoInput'
-import { TodoList } from './TodoList'
+import { TodoList } from './components/TodoList'
 import { FilterTodosProvider } from './components/FilterTodosProvider'
-import { TodoFilters } from './TodoFilters'
+import { TodoFilters } from './components/TodoFilters'
 
 export function App() {
 	return (
